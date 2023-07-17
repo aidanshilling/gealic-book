@@ -1,24 +1,20 @@
 import Navlink from "./Navlink";
 
-const linkStyle = `text-center font-semibold text-lg`;
+const linkStyle = `text-center text-lg`;
 
 const Navbar = () => {
 	return (
-		<div className="fixed w-full">
-			<div className="flex justify-center pt-5">
-				<nav className="grid grid-cols-3 gap-20">
-					<Navlink className={linkStyle} href={"#history"}>
-						History
-					</Navlink>
-					<Navlink className={linkStyle} href={"#"}>
-						About
-					</Navlink>
-					<Navlink className={linkStyle} href={"#"}>
-						Journal
-					</Navlink>
-				</nav>
-			</div>
-		</div>
+		<nav className="fixed w-full flex justify-end space-x-8 px-8 py-4">
+			<Navlink className={linkStyle} href={"#history"}>
+				History
+			</Navlink>
+			<Navlink className={linkStyle} href={"#"}>
+				Interviews
+			</Navlink>
+			<Navlink className={linkStyle} href={"#"}>
+				Journal
+			</Navlink>
+		</nav>
 	);
 };
 
