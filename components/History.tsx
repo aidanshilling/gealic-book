@@ -1,9 +1,20 @@
 "use client";
-import { Pie } from "react-chartjs-2";
-import { Chart as ChartJS, ArcElement, Tooltip, Legend, ChartOptions } from "chart.js";
-ChartJS.register(ArcElement, Tooltip, Legend);
+import { Line, Pie } from "react-chartjs-2";
+import {
+	Chart as ChartJS,
+	ArcElement,
+	Tooltip,
+	Legend,
+	ChartOptions,
+	CategoryScale,
+	LinearScale,
+	PointElement,
+	LineElement,
+	Title,
+} from "chart.js";
+ChartJS.register(ArcElement, Tooltip, Legend, CategoryScale, LinearScale, PointElement, LineElement, Title);
 
-const data = {
+const censusData = {
 	labels: ["Spoken Very Well", "Spoken Well", "Spoken poorly"],
 	datasets: [
 		{
@@ -16,13 +27,56 @@ const data = {
 	],
 };
 
-const options: ChartOptions = {
+const censusOptions: ChartOptions = {
 	plugins: {
 		legend: {
 			position: "left",
 			align: "start",
 		},
 	},
+};
+
+const scaleOptions: ChartOptions = {
+	responsive: true,
+	plugins: {
+		legend: {
+			position: "top",
+			align: "start",
+		},
+	},
+};
+
+const scaleData = {
+	labels: [
+		"1851",
+		"1861",
+		"1871",
+		"1881",
+		"1901",
+		"1911",
+		"1926",
+		"1936",
+		"1946",
+		"1951",
+		"1961",
+		"1971",
+		"1981",
+		"1991",
+		"2002",
+		"2006",
+		"2016",
+		"2022",
+	],
+	datasets: [
+		{
+			label: "Number of Irish Speakers in millions",
+			data: [
+				4, 3.2, 2.7, 2.5, 1.9, 1.6, 1.4, 0.681, 0.426, 0.36, 0.361, 0.393, 0.374, 0.329, 0.251, 0.184, 0.163, 1.76, 1.9,
+			],
+			borderColor: "rgb(255, 99, 132)",
+			backgroundColor: "rgba(255, 99, 132, 0.5)",
+		},
+	],
 };
 
 const History = () => {
@@ -56,8 +110,11 @@ const History = () => {
 							</p>
 						</div>
 						<div className="ml-8">
-							<h1 className="text-xl font-semibold">Ability to speak Irish, Census 2022</h1>
-							<Pie data={data} options={options} />
+							<h1 className="text-xl text-zinc-500 font-medium">Ability to speak Irish, Census 2022</h1>
+							<Pie data={censusData} options={censusOptions} />
+
+							<h1 className="text-xl text-zinc-500 font-medium">Change in Irish Speakers, 1850 to 2022</h1>
+							<Line data={scaleData} options={scaleOptions} />
 						</div>
 					</div>
 				</div>
