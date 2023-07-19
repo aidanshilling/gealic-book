@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import TitleImage from "../public/title_image.png";
 import Image from "next/image";
 import History from "@/components/History";
+import Interviews from "@/components/Interviews";
 
 export default function Home() {
 	return (
@@ -23,6 +24,7 @@ export default function Home() {
 				</div>
 			</div>
 			<History />
+			<Interviews />
 		</main>
 	);
 }

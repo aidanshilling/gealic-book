@@ -8,10 +8,11 @@ interface NavlinkProps {
 
 const Navlink = ({ href, className, children }: NavlinkProps) => {
 	return (
-		<div className="group text-center flex flex-col items-center">
+		<div className="group flex flex-col">
 			<Link href={href} className={`${className} w-full`}>
 				{children}
 			</Link>
+			<div className="hidden group-hover:inline border border-t w-0 group-hover:w-full transition-all"></div>
 		</div>
 	);
 };

@@ -8,7 +8,7 @@ const Navbar = () => {
 			<Navlink className={linkStyle} href={"#history"}>
 				History
 			</Navlink>
-			<Navlink className={linkStyle} href={"#"}>
+			<Navlink className={linkStyle} href={"#interviews"}>
 				Interviews
 			</Navlink>
 			<Navlink className={linkStyle} href={"#"}>
