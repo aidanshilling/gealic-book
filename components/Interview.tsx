@@ -19,7 +19,7 @@ const Interview = ({ image, name, videoUrl, text }: InterviewProps) => {
 					<Image src={image} alt={"PJ"} />
 				</div>
 				<div className="ml-8">
-					<h1 className="mb-8 text-3xl text-zinc-500 font-medium">{name}</h1>
+					<h1 className="mb-4 text-3xl text-zinc-500 font-medium">{name}</h1>
 					<p>{text}</p>
 				</div>
 			</div>

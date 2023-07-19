@@ -4,7 +4,7 @@ import pjbw1 from "../public/pjbw1.jpg";
 
 const Interviews = () => {
 	return (
-		<div className="bg-zinc-800">
+		<div className="bg-zinc-900">
 			<div id="interviews" className="min-h-screen flex mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 				<div className="mx-auto max-w-4xl py-10">
 					<h1 className="font-bold text-5xl">Interviews</h1>

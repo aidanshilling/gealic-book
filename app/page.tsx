@@ -10,7 +10,7 @@ export default function Home() {
 			<Image
 				src={TitleImage}
 				alt="Farm in Northern Ireland"
-				className="min-h-screen object-cover fixed -z-10 opacity-50"
+				className="min-h-screen object-cover fixed -z-10 opacity-80"
 			/>
 			<Navbar />
 			<div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

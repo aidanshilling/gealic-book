@@ -81,7 +81,7 @@ const scaleData = {
 
 const History = () => {
 	return (
-		<div className="bg-zinc-800">
+		<div className="bg-zinc-900">
 			<div id="history" className="min-h-screen flex items-center mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 				<div className="mx-auto max-w-4xl py-10">
 					<h1 className="font-bold text-5xl">A Brief History</h1>
