@@ -1,6 +1,6 @@
 import Navlink from "./Navlink";
 
-const linkStyle = `text-center text-lg`;
+const linkStyle = `text-center text-lg drop-shadow-sm`;
 
 const Navbar = () => {
 	return (
@@ -9,7 +9,7 @@ const Navbar = () => {
 				History
 			</Navlink>
 			<Navlink className={linkStyle} href={"#interviews"}>
-				Interviews
+				People
 			</Navlink>
 			<Navlink className={linkStyle} href={"#"}>
 				Journal
