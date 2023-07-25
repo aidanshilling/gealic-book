@@ -3,6 +3,7 @@ import TitleImage from "../public/title_image.png";
 import Image from "next/image";
 import History from "@/components/History";
 import Interviews from "@/components/Interviews";
+import Journal from "@/components/Journal";
 
 export default function Home() {
 	return (
@@ -25,6 +26,7 @@ export default function Home() {
 			</div>
 			<History />
 			<Interviews />
+			<Journal />
 		</main>
 	);
 }

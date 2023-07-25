@@ -11,7 +11,7 @@ const Navbar = () => {
 			<Navlink className={linkStyle} href={"#interviews"}>
 				People
 			</Navlink>
-			<Navlink className={linkStyle} href={"#"}>
+			<Navlink className={linkStyle} href={"#journal"}>
 				Journal
 			</Navlink>
 		</nav>
