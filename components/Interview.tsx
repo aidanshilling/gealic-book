@@ -10,16 +10,16 @@ const ReactPlayer = dynamic(() => import("react-player/lazy"), { ssr: false });
 
 interface InterviewProps {
 	name: string;
-	videoUrl: string;
+	videos: string[];
 	text: string;
 	images: StaticImageData[];
 }
 
-const Interview = ({ images, name, videoUrl, text }: InterviewProps) => {
+const Interview = ({ images, name, videos, text }: InterviewProps) => {
 	const [index, setIndex] = useState(-1);
 
 	return (
-		<div className="mt-4 border-t-2 pt-4 border-zinc-800">
+		<div className="mt-4 mb-32 border-t-2 pt-4 border-zinc-800">
 			<div className="grid grid-cols-2">
 				<div>
 					<Image src={images[0]} alt={"PJ"} />
@@ -29,11 +29,15 @@ const Interview = ({ images, name, videoUrl, text }: InterviewProps) => {
 					<p>{text}</p>
 				</div>
 			</div>
+			{videos.map((video, i) => (
+				<div key={i} className="mt-4">
+					<ReactPlayer width={"auto"} url={video} />
+				</div>
+			))}
 			<div className="my-4">
 				<Gallery images={images} onClick={(idx: number, item: any) => setIndex(idx)} enableImageSelection={false} />
 				<Lightbox slides={images} open={index >= 0} index={index} close={() => setIndex(-1)} />
 			</div>
-			<ReactPlayer width={"auto"} url={videoUrl} />
 		</div>
 	);
 };
