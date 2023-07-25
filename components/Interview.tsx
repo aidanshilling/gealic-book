@@ -29,15 +29,15 @@ const Interview = ({ images, name, videos, text }: InterviewProps) => {
 					<p>{text}</p>
 				</div>
 			</div>
-			{videos.map((video, i) => (
-				<div key={i} className="mt-4">
-					<ReactPlayer width={"auto"} url={video} />
-				</div>
-			))}
 			<div className="my-4">
 				<Gallery images={images} onClick={(idx: number, item: any) => setIndex(idx)} enableImageSelection={false} />
 				<Lightbox slides={images} open={index >= 0} index={index} close={() => setIndex(-1)} />
 			</div>
+			{videos.map((video, i) => (
+				<div key={i} className="mb-4">
+					<ReactPlayer width={"auto"} url={video} />
+				</div>
+			))}
 		</div>
 	);
 };
